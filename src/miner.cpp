@@ -7,7 +7,7 @@
 #include "txdb.h"
 #include "miner.h"
 #include "kernel.h"
-
+#include "uint256.h"
 using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////
@@ -482,7 +482,7 @@ void ThreadStakeMiner(CWallet *pwallet)
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as the mining thread
-    RenameThread("blackcoin-miner");
+    RenameThread("evoblu-miner");
 
     CReserveKey reservekey(pwallet);
 

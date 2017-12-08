@@ -1,9 +1,9 @@
-Building BlackCoin
+Building EvoBlu
 
-See doc/readme-qt.rst for instructions on building BlackCoin QT,
+See doc/readme-qt.rst for instructions on building EvoBlu QT,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of BlackCoin.
+implementation of EvoBlu.
 
-See doc/build-*.txt for instructions on building blackcoind,
+See doc/build-*.txt for instructions on building evoblud,
 the intended-for-services, no-graphical-interface, reference
-implementation of BlackCoin.
+implementation of EvoBlu.

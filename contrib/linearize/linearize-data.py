@@ -116,7 +116,7 @@ def copydata(settings, blkindex, blkset):
 
 	while True:
 		if not inF:
-			fname = "%s/blk%04d.dat" % (settings['input'], inFn)
+			fname = "%s/eblu%04d.dat" % (settings['input'], inFn)
 			print("Input file" + fname)
 			try:
 				inF = open(fname, "rb")
@@ -183,7 +183,7 @@ def copydata(settings, blkindex, blkset):
 			if fileOutput:
 				outFname = settings['output_file']
 			else:
-				outFname = "%s/blk%05d.dat" % (settings['output'], outFn)
+				outFname = "%s/eblu%05d.dat" % (settings['output'], outFn)
 			print("Output file" + outFname)
 			outF = open(outFname, "wb")
 

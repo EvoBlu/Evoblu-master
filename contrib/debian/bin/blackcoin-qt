@@ -4,13 +4,13 @@ set -e
 
 umask 077
 
-basedir=~/.blackcoin
+basedir=~/.evoblu
 dbfile="$basedir/DB_CONFIG"
-cfgfile="$basedir/blackcoin.conf"
+cfgfile="$basedir/evoblu.conf"
 
 [ -e "$basedir" ] || mkdir "$basedir"
 
-# Blackcoin does not clean up DB log files by default
+# Evoblu does not clean up DB log files by default
 [ -e "$dbfile" ] || echo 'set_flags DB_LOG_AUTOREMOVE' > "$dbfile"
 
-exec /usr/lib/blackcoin/blackcoin-qt "$@"
+exec /usr/lib/evoblu/evoblu-qt "$@"

@@ -22,7 +22,7 @@ using namespace std;
 using namespace boost;
 
 #if defined(NDEBUG)
-# error "BlackCoin cannot be compiled without assertions."
+# error "EvoBlu cannot be compiled without assertions."
 #endif
 
 //
@@ -41,14 +41,13 @@ set<pair<COutPoint, unsigned int> > setStakeSeen;
 
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 CBigNum bnProofOfStakeLimitV2(~uint256(0) >> 48);
-
-int nStakeMinConfirmations = 500;
-unsigned int nStakeMinAge = 8 * 60 * 60; // 8 hours
-unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
-
-int nCoinbaseMaturity = 500;
+int nStakeMinConfirmations = 250 ;//originally 500;
+unsigned int nStakeMinAge = 24 * 60 * 60;; /// 24 hours
+unsigned int nModifierInterval = 10; // time to elapse before new modifier is computed
+//Evoblu change
+int nCoinbaseMaturity = 1; //this was set to 250 but in order to premine I set it to 1 change this back mamadou
 CBlockIndex* pindexGenesisBlock = NULL;
-int nBestHeight = -1;
+int nBestHeight = 0;
 
 uint256 nBestChainTrust = 0;
 uint256 nBestInvalidTrust = 0;
@@ -77,7 +76,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "BlackCoin Signed Message:\n";
+const string strMessageMagic = "EvoBlu Signed Message:\n";
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -971,13 +970,20 @@ static CBigNum GetProofOfStakeLimit(int nHeight)
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int64_t nFees)
 {
-    int64_t nSubsidy = 10000 * COIN;
+    int64_t nSubsidy = 45500000 * COIN;
 
     LogPrint("creation", "GetProofOfWorkReward() : create=%s nSubsidy=%d\n", FormatMoney(nSubsidy), nSubsidy);
-
-    return nSubsidy + nFees;
+  if(pindexBest->nHeight == 1){return nSubsidy;} else {return 0*COIN;}
 }
 
+// miner's coin base reward
+/*
+int64_t GetProofOfWorkReward(int64_t nFees)
+{
+    int64_t PreMine = 30000 * COIN;
+    if(pindexBest->nHeight == 1){return PreMine;} else {return 1*COIN;}
+}
+*/
 // miner's coin stake reward
 int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees)
 {
@@ -991,8 +997,8 @@ int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, i
 
     return nSubsidy + nFees;
 }
-
-static const int64_t nTargetTimespan = 16 * 60;  // 16 mins
+//Evoblu change
+static const int64_t nTargetTimespan =  4 * 60;  // 4 minutes
 
 // ppcoin: find last block index up to pindex
 const CBlockIndex* GetLastBlockIndex(const CBlockIndex* pindex, bool fProofOfStake)
@@ -1289,11 +1295,11 @@ bool CTransaction::ConnectInputs(CTxDB& txdb, MapPrevTx inputs, map<uint256, CTx
             if (txPrev.nTime > nTime)
                 return DoS(100, error("ConnectInputs() : transaction timestamp earlier than input transaction"));
 
-            if (IsProtocolV3(nTime))
-            {
-                if (txPrev.vout[prevout.n].IsEmpty())
-                    return DoS(1, error("ConnectInputs() : special marker is not spendable"));
-            }
+            //if (IsProtocolV3(nTime))
+           // {
+            //    if (txPrev.vout[prevout.n].IsEmpty())
+           //         return DoS(1, error("ConnectInputs() : special marker is not spendable"));
+           // }
 
             // Check for negative or overflow input values
             nValueIn += txPrev.vout[prevout.n].nValue;
@@ -2028,12 +2034,15 @@ bool CBlock::AcceptBlock()
         return DoS(10, error("AcceptBlock() : prev block not found"));
     CBlockIndex* pindexPrev = (*mi).second;
     int nHeight = pindexPrev->nHeight+1;
-
+    //change this back
+    
     if (IsProtocolV2(nHeight) && nVersion < 7)
         return DoS(100, error("AcceptBlock() : reject too old nVersion = %d", nVersion));
     else if (!IsProtocolV2(nHeight) && nVersion > 6)
         return DoS(100, error("AcceptBlock() : reject too new nVersion = %d", nVersion));
-
+    
+    //////
+    /////
     if (IsProofOfWork() && nHeight > Params().LastPOWBlock())
         return DoS(100, error("AcceptBlock() : reject proof-of-work at height %d", nHeight));
 
@@ -2400,7 +2409,7 @@ bool CheckDiskSpace(uint64_t nAdditionalBytes)
 
 static filesystem::path BlockFilePath(unsigned int nFile)
 {
-    string strBlockFn = strprintf("blk%04u.dat", nFile);
+    string strBlockFn = strprintf("eblu%04u.dat", nFile);
     return GetDataDir() / strBlockFn;
 }
 
@@ -2635,7 +2644,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("blackcoin-loadblk");
+    RenameThread("evoblu-loadblk");
 
     CImportingNow imp;
 
