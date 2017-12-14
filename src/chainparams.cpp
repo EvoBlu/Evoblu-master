@@ -75,7 +75,7 @@ public:
         vout[0].SetEmpty();
       //  CScript pubkey = 030d2ceab66550478daae8ef5df77e6c8f2f5808372fec357f4c3915b6455fbd88;
        // vout[0].scriptPubKey = CScript('030d2ceab66550478daae8ef5df77e6c8f2f5808372fec357f4c3915b6455fbd88');
-        CTransaction txNew(1, 1512691584, vin, vout, 0);// change me to 1 for staking mamadou note
+        CTransaction txNew(1, 1512691584, vin, vout, 0);// change me to 1 for staking   note
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();

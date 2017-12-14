@@ -64,7 +64,7 @@ inline int64_t FutureDriftV2(int64_t nTime) { return nTime + 15; }
 inline int64_t FutureDrift(int64_t nTime, int nHeight) { return IsProtocolV2(nHeight) ? FutureDriftV2(nTime) : FutureDriftV1(nTime); }
 
 
-///mamadou changed 64 and 60
+///  changed 64 and 60
 inline unsigned int GetTargetSpacing(int nHeight) { return IsProtocolV2(nHeight) ? 64 : 60; }
 
 extern CScript COINBASE_FLAGS;

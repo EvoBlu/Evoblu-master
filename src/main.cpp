@@ -45,7 +45,7 @@ int nStakeMinConfirmations = 250 ;//originally 500;
 unsigned int nStakeMinAge = 24 * 60 * 60;; /// 24 hours
 unsigned int nModifierInterval = 10; // time to elapse before new modifier is computed
 //Evoblu change
-int nCoinbaseMaturity = 1; //this was set to 250 but in order to premine I set it to 1 change this back mamadou
+int nCoinbaseMaturity = 1; //this was set to 250 but in order to premine I set it to 1 change this back  
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = 0;
 
