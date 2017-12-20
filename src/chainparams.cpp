@@ -90,7 +90,7 @@ public:
 
 
     
-       vSeeds.push_back(CDNSSeedData("ourseed", "ec2-34-232-239-197.compute-1.amazonaws.com"));
+        vSeeds.push_back(CDNSSeedData("ourseed", "ec2-34-227-138-228.compute-1.amazonaws.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 25);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 85);
