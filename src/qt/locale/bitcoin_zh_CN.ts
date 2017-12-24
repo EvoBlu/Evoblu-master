@@ -15,7 +15,9 @@
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The EvoBlu developers</source>
+Copyright © 2014 The Blackcoin developers 
+Copyright © 2017 The EvoBlu developers
+</source>
         <translation>版权所有 © 2009-2014 比特币Bitcoin开发组
 版权所有 © 2012-2014 新星币Novacoin开发组
 版权所有 © 2014 黑币EvoBlu开发组</translation>
