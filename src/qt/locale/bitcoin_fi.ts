@@ -4,7 +4,7 @@
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About EvoBlu</source>
-        <translation>Tietoa BlackCoinista</translation>
+        <translation>Tietoa EvoBluista</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -359,7 +359,7 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     <message>
         <location line="+4"/>
         <source>Show information about EvoBlu</source>
-        <translation>Näytä tietoja BlackCoinista</translation>
+        <translation>Näytä tietoja EvoBluista</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -455,7 +455,7 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     <message>
         <location line="+193"/>
         <source>&amp;About EvoBlu</source>
-        <translation>&amp;Tietoa BlackCoinista</translation>
+        <translation>&amp;Tietoa EvoBluista</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1507,7 +1507,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location line="+7"/>
         <source>Show the EvoBlu-Qt help message to get a list with possible EvoBlu command-line options.</source>
-        <translation>Näytä EvoBlu-Qt:n avustusohje saadaksesi listan käytettävistä BlackCoinin komentokehotteen määritteistä.</translation>
+        <translation>Näytä EvoBlu-Qt:n avustusohje saadaksesi listan käytettävistä EvoBluin komentokehotteen määritteistä.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1532,7 +1532,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location line="+25"/>
         <source>EvoBlu Core</source>
-        <translation>BlackCoinin ydin</translation>
+        <translation>EvoBluin ydin</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1552,7 +1552,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location filename="../rpcconsole.cpp" line="-28"/>
         <source>Welcome to the EvoBlu RPC console.</source>
-        <translation>Tervetuloa BlackCoinin RPC-konsoliin.</translation>
+        <translation>Tervetuloa EvoBluin RPC-konsoliin.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2585,7 +2585,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+8"/>
         <source>EvoBlu version</source>
-        <translation>BlackCoinin versio</translation>
+        <translation>EvoBluin versio</translation>
     </message>
     <message>
         <location line="+1"/>

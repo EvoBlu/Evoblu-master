@@ -4,12 +4,12 @@
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About EvoBlu</source>
-        <translation>O BlackCoinu</translation>
+        <translation>O EvoBluu</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>&lt;b&gt;EvoBlu&lt;/b&gt; version</source>
-        <translation>Verze &lt;b&gt;BlackCoinu&lt;/b&gt; </translation>
+        <translation>Verze &lt;b&gt;EvoBluu&lt;/b&gt; </translation>
     </message>
     <message>
         <location line="+41"/>
@@ -353,7 +353,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+4"/>
         <source>Show information about EvoBlu</source>
-        <translation>Zobraz informace a BlackCoinu</translation>
+        <translation>Zobraz informace a EvoBluu</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -449,7 +449,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+193"/>
         <source>&amp;About EvoBlu</source>
-        <translation>&amp;O BlackCoinu</translation>
+        <translation>&amp;O EvoBluu</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1182,7 +1182,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <message>
         <location line="+13"/>
         <source>The user interface language can be set here. This setting will take effect after restarting EvoBlu.</source>
-        <translation>Zde můžeš nastavit jazyk uživatelského rozhraní. Nastavení se projeví až po restartu BlackCoinu.</translation>
+        <translation>Zde můžeš nastavit jazyk uživatelského rozhraní. Nastavení se projeví až po restartu EvoBluu.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1239,7 +1239,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
         <location line="-9"/>
         <location line="+9"/>
         <source>This setting will take effect after restarting EvoBlu.</source>
-        <translation>Nastavení se projeví až po restartu BlackCoinu.</translation>
+        <translation>Nastavení se projeví až po restartu EvoBluu.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1527,7 +1527,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <message>
         <location line="+25"/>
         <source>EvoBlu Core</source>
-        <translation>Jádro BlackCoinu</translation>
+        <translation>Jádro EvoBluu</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1537,7 +1537,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <message>
         <location line="+7"/>
         <source>Open the EvoBlu debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Otevři logovací soubor BlackCoinu z aktuálního datového adresáře. Pro velké logy to může trvat několik sekund.</translation>
+        <translation>Otevři logovací soubor EvoBluu z aktuálního datového adresáře. Pro velké logy to může trvat několik sekund.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2580,7 +2580,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+8"/>
         <source>EvoBlu version</source>
-        <translation>Verze BlackCoinu</translation>
+        <translation>Verze EvoBluu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3090,7 +3090,7 @@ for example: alertnotify=echo %%s | mail -s &quot;EvoBlu Alert&quot; admin@foo.c
     <message>
         <location line="+4"/>
         <source>Error loading wallet.dat: Wallet requires newer version of EvoBlu</source>
-        <translation>Chyba načítání wallet.dat: Peněženka vyžaduje novější verzi BlackCoinu</translation>
+        <translation>Chyba načítání wallet.dat: Peněženka vyžaduje novější verzi EvoBluu</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -20,7 +20,7 @@
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>co.evoblu.BlackCoinPayment</string>
+            <string>co.evoblu.EvoBluPayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
               <string>evoblu</string>

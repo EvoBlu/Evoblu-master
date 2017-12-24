@@ -18,7 +18,7 @@ Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The EvoBlu developers</source>
         <translation>版权所有 © 2009-2014 比特币Bitcoin开发组
 版权所有 © 2012-2014 新星币Novacoin开发组
-版权所有 © 2014 黑币BlackCoin开发组</translation>
+版权所有 © 2014 黑币EvoBlu开发组</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1019,7 +1019,7 @@ Address: %4
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
         <source>EvoBlu-Qt</source>
-        <translation>黑币客户端BlackCoin-Qt</translation>
+        <translation>黑币客户端EvoBlu-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
