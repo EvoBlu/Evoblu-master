@@ -75,22 +75,39 @@ public:
         vout[0].SetEmpty();
       //  CScript pubkey = 030d2ceab66550478daae8ef5df77e6c8f2f5808372fec357f4c3915b6455fbd88;
        // vout[0].scriptPubKey = CScript('030d2ceab66550478daae8ef5df77e6c8f2f5808372fec357f4c3915b6455fbd88');
-        CTransaction txNew(1, 1512691584, vin, vout, 0);// change me to 1 for staking   note
+        CTransaction txNew(1, 1513729495, vin, vout, 0);// change me to 1 for staking mamadou note
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1512691584;
+        genesis.nTime    = 1513729495;
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 1237996;//2198;
+        genesis.nNonce   = 0;
 
       hashGenesisBlock = genesis.GetHash();
-    assert(hashGenesisBlock == uint256("0xb827d292fab16043670e9b1c2a7736089365e570d4dd82185b62b60126d6ae20")); //evoblugenesisblock
-    assert(genesis.hashMerkleRoot == uint256("0xb67edacacae9e3e3bbaa74c1117f76e2a7c7ede156edc1b27f81f6f4c4ed052a"));
+  assert(hashGenesisBlock == uint256("0xe84de417da045c6828367ae254e9797d5e1aaa227b7db838694a6c0beda6fa9a"));
+ assert(genesis.hashMerkleRoot == uint256("0x0f421dda8766eb4db0538a6dd465323b99fb977c67904652a7faf95604fe3df9"));
 
 
     
-        vSeeds.push_back(CDNSSeedData("ourseed", "ec2-34-227-138-228.compute-1.amazonaws.com"));
+
+            //  hashGenesisBlock = genesis.GetHash();
+
+             
+ //  hashGenesisBlock = uint256S("0x01");
+//   genesis.nTime    = 1510546117;
+//
+     // hashGenesisBlock = uint256("0x00000af2583c392eb6359d7180b00257ae62e68b08e413fbfbacccd4dc467e99");
+//if (true && genesis.GetHash() != hashGenesisBlock)
+  //    {
+  //      for(genesis.nNonce ==0; genesis.GetHash() > ~uint256(0) >> 20; genesis.nNonce++){  
+ //      LogPrintf("New genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
+ //    LogPrintf("New genesis nonce: %lu\n", (unsigned long)genesis.nNonce);
+ //   LogPrintf("New genesis hash: %s\n", genesis.GetHash().ToString().c_str());
+//} } 
+        //vSeeds.push_back(CDNSSeedData("vasin.nl", "dnsseed.vasin.nl"));
+     //  vSeeds.push_back(CDNSSeedData("vps.joshuajbouw.com", "dnsseed.joshuajbouw.com"));
+       vSeeds.push_back(CDNSSeedData("ourseed", "ec2-34-227-138-228.compute-1.amazonaws.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 25);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 85);

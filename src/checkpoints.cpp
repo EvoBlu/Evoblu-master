@@ -29,8 +29,8 @@ namespace Checkpoints
     //0, uint256("genesisblockhash")
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-       (0, uint256("0xb827d292fab16043670e9b1c2a7736089365e570d4dd82185b62b60126d6ae20"))
-        (4,uint256("0xa568cb81759b33ba6d270099c37e9cea4465320b77d1c1dfb2aeadd4c8196000"))
+       (0, uint256("0xe84de417da045c6828367ae254e9797d5e1aaa227b7db838694a6c0beda6fa9a"))
+      //  (0,uint256("0x00000027f854c9e4f3581fe09c1041317964f417a05519e349382ff7a00c8fc59a7276"))
         //(1,uint256("0x00000027f854c9e4f3581fe09c1041317964f417a05519e349382ff7a00c8fc59a7276"))
       //  ( 5001,   uint256("0x2fac9021be0c311e7b6dc0933a72047c70f817e2eb1e01bede011193ad1b28bc") ) // hardfork
       //  ( 10000,  uint256("0x0000000000827e4dc601f7310a91c45af8df0dfc1b6fa1dfa5b896cb00c8767c") ) // last pow block

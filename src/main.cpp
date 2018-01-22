@@ -39,15 +39,17 @@ CTxMemPool mempool;
 map<uint256, CBlockIndex*> mapBlockIndex;
 set<pair<COutPoint, unsigned int> > setStakeSeen;
 
+
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 CBigNum bnProofOfStakeLimitV2(~uint256(0) >> 48);
 int nStakeMinConfirmations = 250 ;//originally 500;
 unsigned int nStakeMinAge = 24 * 60 * 60;; /// 24 hours
 unsigned int nModifierInterval = 10; // time to elapse before new modifier is computed
 //Evoblu change
-int nCoinbaseMaturity = 1; //this was set to 250 but in order to premine I set it to 1 change this back  
+int nCoinbaseMaturity = 1; //this was set to 250 but in order to premine I set it to 1 change this back mamadou
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = 0;
+
 
 uint256 nBestChainTrust = 0;
 uint256 nBestInvalidTrust = 0;
@@ -970,7 +972,7 @@ static CBigNum GetProofOfStakeLimit(int nHeight)
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int64_t nFees)
 {
-    int64_t nSubsidy = 45500000 * COIN;
+    int64_t nSubsidy = 11000000 * COIN;
 
     LogPrint("creation", "GetProofOfWorkReward() : create=%s nSubsidy=%d\n", FormatMoney(nSubsidy), nSubsidy);
   if(pindexBest->nHeight == 1){return nSubsidy;} else {return 0*COIN;}
@@ -998,7 +1000,7 @@ int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, i
     return nSubsidy + nFees;
 }
 //Evoblu change
-static const int64_t nTargetTimespan =  4 * 60;  // 4 minutes
+static const int64_t nTargetTimespan = 10 * 30;  // 5 seconds
 
 // ppcoin: find last block index up to pindex
 const CBlockIndex* GetLastBlockIndex(const CBlockIndex* pindex, bool fProofOfStake)
@@ -2035,12 +2037,12 @@ bool CBlock::AcceptBlock()
     CBlockIndex* pindexPrev = (*mi).second;
     int nHeight = pindexPrev->nHeight+1;
     //change this back
-    
+    /*
     if (IsProtocolV2(nHeight) && nVersion < 7)
         return DoS(100, error("AcceptBlock() : reject too old nVersion = %d", nVersion));
     else if (!IsProtocolV2(nHeight) && nVersion > 6)
         return DoS(100, error("AcceptBlock() : reject too new nVersion = %d", nVersion));
-    
+    */
     //////
     /////
     if (IsProofOfWork() && nHeight > Params().LastPOWBlock())
