@@ -352,7 +352,7 @@ static QWidget* makeToolBarSpacer()
 {
     QWidget* spacer = new QWidget();
     spacer->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
-    spacer->setStyleSheet(fUseBlackTheme ?"QWidget { background: rgb(8,43,99); }" : "QWidget { background: none; }");
+    spacer->setStyleSheet(fUseBlackTheme ? "QWidget { background: rgb(39, 169, 234); }" : "QWidget { background: none; }");
     return spacer;
 }
 
@@ -367,7 +367,7 @@ void BitcoinGUI::createToolBars()
         QWidget* header = new QWidget();
         header->setMinimumSize(160, 116);
         header->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        header->setStyleSheet("QWidget { background-color:rgb(8,43,99); background-repeat: no-repeat; background-image: url(:/images/header); background-position: top center; }");
+        header->setStyleSheet("QWidget { background-color:  rgb(39, 169, 234); background-repeat: no-repeat; background-image: url(:/images/header); background-position: top center; }");
         toolbar->addWidget(header);
         toolbar->addWidget(makeToolBarSpacer());
     }
@@ -1004,7 +1004,6 @@ void BitcoinGUI::updateStakingIcon()
     if (nLastCoinStakeSearchInterval && nWeight)
     {
         uint64_t nWeight = this->nWeight;
-        LogPrintf("nWeight: %s\n", nWeight);
         uint64_t nNetworkWeight = GetPoSKernelPS();
         unsigned nEstimateTime = GetTargetSpacing(nBestHeight) * nNetworkWeight / nWeight;
 
