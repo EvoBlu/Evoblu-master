@@ -44,11 +44,11 @@ CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 CBigNum bnProofOfStakeLimitV2(~uint256(0) >> 48);
 int nStakeMinConfirmations = 250 ;//originally 500;
 unsigned int nStakeMinAge = 24 * 60 * 60;; /// 24 hours
-unsigned int nModifierInterval = 10; // time to elapse before new modifier is computed
+unsigned int nModifierInterval = 10*60; // time to elapse before new modifier is computed
 //Evoblu change
-int nCoinbaseMaturity = 1; //this was set to 250 but in order to premine I set it to 1 change this back mamadou
+int nCoinbaseMaturity = 250; //
 CBlockIndex* pindexGenesisBlock = NULL;
-int nBestHeight = 0;
+int nBestHeight = -1;
 
 
 uint256 nBestChainTrust = 0;
