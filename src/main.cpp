@@ -48,7 +48,7 @@ unsigned int nModifierInterval = 10*60; // time to elapse before new modifier is
 //Evoblu change
 int nCoinbaseMaturity = 250; //
 CBlockIndex* pindexGenesisBlock = NULL;
-int nBestHeight = -1;
+int nBestHeight = 0;
 
 
 uint256 nBestChainTrust = 0;
