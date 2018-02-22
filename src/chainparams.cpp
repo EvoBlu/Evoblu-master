@@ -91,22 +91,7 @@ public:
 
     
 
-            //  hashGenesisBlock = genesis.GetHash();
 
-             
- //  hashGenesisBlock = uint256S("0x01");
-//   genesis.nTime    = 1510546117;
-//
-     // hashGenesisBlock = uint256("0x00000af2583c392eb6359d7180b00257ae62e68b08e413fbfbacccd4dc467e99");
-//if (true && genesis.GetHash() != hashGenesisBlock)
-  //    {
-  //      for(genesis.nNonce ==0; genesis.GetHash() > ~uint256(0) >> 20; genesis.nNonce++){  
- //      LogPrintf("New genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
- //    LogPrintf("New genesis nonce: %lu\n", (unsigned long)genesis.nNonce);
- //   LogPrintf("New genesis hash: %s\n", genesis.GetHash().ToString().c_str());
-//} } 
-        //vSeeds.push_back(CDNSSeedData("vasin.nl", "dnsseed.vasin.nl"));
-     //  vSeeds.push_back(CDNSSeedData("vps.joshuajbouw.com", "dnsseed.joshuajbouw.com"));
        vSeeds.push_back(CDNSSeedData("ourseed", "ec2-34-227-138-228.compute-1.amazonaws.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 25);
